@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+:root {
+  --primary-color: #FF7A00;
+  --primary-dark: #E56700;
+  --primary-light: #FFE8D1;
+  --text-color: #222222;
+  --text-light: #666666;
+  --white-color: #FFFFFF;
+  --background-color: #FFFDF9;
+  --section-bg: #F5F5F5;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --border-radius: 18px;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  direction: rtl;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+
+section {
+  padding: 100px 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+
+
+.main-btn {
+  border: none;
+  outline: none;
+  padding: 14px 30px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.main-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+
+.custom-card {
+  background: var(--white-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.custom-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= NAVBAR ================= */
+
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 16px 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+/* Logo */
+
+.logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.logo-box img {
+  width: 180px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.nav-links {
+  gap: 25px;
+}
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  padding: 14px 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+}
+
+.logo-box img {
+  width: 180px;
+  height: 60px;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.nav-links {
+  gap: 30px;
+}
+
+.nav-links a {
+  color: var(--text-color) !important;
+  font-size: 18px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  border-radius: 50px;
+  background: var(--primary-color);
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color) !important;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+.navbar-toggler {
+  padding: 6px 10px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  background: var(--primary-light);
+}
+
+@media (max-width: 992px) {
+
+  .nav-links {
+    padding: 25px 0;
+    gap: 12px;
+  }
+
+  .nav-links a {
+    padding: 12px 0 !important;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .logo-box img {
+    width: 140px;
+    height: 50px;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 34px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 28px;
+  }
+
+  .main-btn {
+    width: 100%;
+    text-align: center;
+  }
+  .logo-box img {
+    width: 140px;
+    height: 50px;
+  }
+}
